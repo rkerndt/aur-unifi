@@ -3,7 +3,7 @@
 # Contributor: Sébastien "Seblu" Luttringer <seblu@archlinux.org>
 
 pkgname=unifi
-pkgver=5.10.17
+pkgver=5.10.23
 pkgrel=1
 pkgdesc='Centralized management system for Ubiquiti UniFi AP'
 arch=('any')
@@ -19,7 +19,7 @@ source=(UniFi-${pkgver}.zip::https://dl.ubnt.com/unifi/${pkgver}/UniFi.unix.zip
         unifi.sysusers
         unifi.tmpfiles
         LICENSE)
-sha256sums=('d2dd91c994705b5faa7887b5ecb5022e6bc87229271aefbed34df1078261bbdf'
+sha256sums=('d277781d7eefdae93ffd9548102dd38a5d30114f6e90e26bb31574ae55170e8e'
             'SKIP'
             'SKIP'
             'SKIP'

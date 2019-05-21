@@ -3,7 +3,7 @@
 # Contributor: Sébastien "Seblu" Luttringer <seblu@archlinux.org>
 
 pkgname=unifi
-pkgver=5.10.23
+pkgver=5.10.24
 pkgrel=1
 pkgdesc='Centralized management system for Ubiquiti UniFi AP'
 arch=('any')
@@ -13,13 +13,18 @@ url='https://community.ubnt.com/unifi'
 license=('custom')
 depends=('mongodb' 'java-runtime-headless>=8' 'java-runtime-headless<9' 'fontconfig')
 conflicts=('tomcat-native')
-source=(UniFi-${pkgver}.zip::https://dl.ubnt.com/unifi/${pkgver}/UniFi.unix.zip
+
+# Stable release candidates have a build tag added as suffix to package version. Remove once
+# final stable version is released. Increment pkgrel with each subsequent candidate until final.
+build=-fc15f0fdf1
+
+source=(UniFi-${pkgver}${build}.zip::https://dl.ubnt.com/unifi/${pkgver}${build}/UniFi.unix.zip
         mongod
         unifi.service
         unifi.sysusers
         unifi.tmpfiles
         LICENSE)
-sha256sums=('d277781d7eefdae93ffd9548102dd38a5d30114f6e90e26bb31574ae55170e8e'
+sha256sums=('d8fc5e8ddc3463c20dae426bf6ee4d57561ce350503903fd5902100d964f7183'
             'SKIP'
             'SKIP'
             'SKIP'
